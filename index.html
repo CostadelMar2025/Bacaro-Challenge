@@ -39,8 +39,8 @@
             background: #f9f9f9;
         }
         input[type="checkbox"] {
-            transform: scale(1.5);
-            cursor: pointer;
+            width: 20px;
+            height: 20px;
         }
         button {
             background: #27ae60;
@@ -53,130 +53,136 @@
         button:hover {
             background: #219150;
         }
-        #totals {
-            margin-top: 20px;
-            font-size: 18px;
-        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Bacaro Challenge - Ferragosto 2025</h1>
-        <p>Vota il miglior cicchetto nelle quattro categorie: Food, Drink, Experience, Funny</p>
-    </header>
+<header>
+    <h1>Bacaro Challenge - Ferragosto 2025</h1>
+    <p>Ogni famiglia vota il miglior cicchetto nelle quattro categorie: Food, Drink, Experience, Funny</p>
+</header>
 
-    <table id="voteTable">
-        <tr>
-            <th>Famiglia</th>
-            <th>Food</th>
-            <th>Drink</th>
-            <th>Experience</th>
-            <th>Funny</th>
-        </tr>
-        <tr>
-            <td>Ventura</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Albertini</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Embrinati</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Scattolon</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Fosca</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Depentori</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Favaro</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Depolo</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Bertoncello</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Conforte</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-        <tr>
-            <td>Moser</td>
-            <td><input type="checkbox" class="food"></td>
-            <td><input type="checkbox" class="drink"></td>
-            <td><input type="checkbox" class="experience"></td>
-            <td><input type="checkbox" class="funny"></td>
-        </tr>
-    </table>
+<table>
+    <tr>
+        <th>Famiglia</th>
+        <th>Food</th>
+        <th>Drink</th>
+        <th>Experience</th>
+        <th>Funny</th>
+    </tr>
+    <tr>
+        <td>Ventura</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Albertini</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Embrinati</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Scattolon</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Fosca</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Depentori</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Favaro</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Depolo</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Bertoncello</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Conforte</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+    <tr>
+        <td>Moser</td>
+        <td><input type="checkbox" name="Food"></td>
+        <td><input type="checkbox" name="Drink"></td>
+        <td><input type="checkbox" name="Experience"></td>
+        <td><input type="checkbox" name="Funny"></td>
+    </tr>
+</table>
 
-    <button onclick="submitVotes()">Invia Voti</button>
+<button onclick="calcolaVoti()">Invia Voti</button>
 
-    <div id="totals">
-        <p>Food: 0 | Drink: 0 | Experience: 0 | Funny: 0</p>
-    </div>
+<script>
+function calcolaVoti() {
+    const categorie = ["Food", "Drink", "Experience", "Funny"];
+    const risultati = {};
 
-    <script>
-        function submitVotes() {
-            const categories = ['food', 'drink', 'experience', 'funny'];
-            const totals = { food: 0, drink: 0, experience: 0, funny: 0 };
+    categorie.forEach(cat => risultati[cat] = {});
 
-            categories.forEach(cat => {
-                const checkboxes = document.querySelectorAll('input.' + cat);
-                checkboxes.forEach(cb => {
-                    if(cb.checked) totals[cat]++;
-                });
-            });
+    const righe = document.querySelectorAll("table tr");
+    righe.forEach((riga, i) => {
+        if(i === 0) return; // salta intestazione
+        const famiglia = riga.cells[0].textContent;
+        categorie.forEach((cat, j) => {
+            const checkbox = riga.cells[j+1].querySelector("input[type='checkbox']");
+            if(checkbox.checked) {
+                if(!risultati[cat][famiglia]) risultati[cat][famiglia] = 0;
+                risultati[cat][famiglia]++;
+            }
+        });
+    });
 
-            document.getElementById('totals').innerHTML = 
-                `<p>Food: ${totals.food} | Drink: ${totals.drink} | Experience: ${totals.experience} | Funny: ${totals.funny}</p>`;
-
-            alert('Voti inviati!');
+    let messaggio = "Riepilogo voti:\n\n";
+    categorie.forEach(cat => {
+        messaggio += cat + ":\n";
+        for(const famiglia in risultati[cat]) {
+            messaggio += famiglia + ": " + risultati[cat][famiglia] + "\n";
         }
-    </script>
+        messaggio += "\n";
+    });
+
+    alert(messaggio);
+}
+</script>
 
 </body>
 </html>
