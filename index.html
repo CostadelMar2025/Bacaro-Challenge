@@ -53,6 +53,10 @@
         button:hover {
             background: #219150;
         }
+        #totals {
+            margin-top: 20px;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +66,7 @@
         <p>Vota il miglior cicchetto nelle quattro categorie: Food, Drink, Experience, Funny</p>
     </header>
 
-    <table>
+    <table id="voteTable">
         <tr>
             <th>Famiglia</th>
             <th>Food</th>
@@ -72,84 +76,107 @@
         </tr>
         <tr>
             <td>Ventura</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Albertini</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Embrinati</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Scattolon</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Fosca</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Depentori</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Favaro</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Depolo</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Bertoncello</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Conforte</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
         <tr>
             <td>Moser</td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
-            <td><input type="checkbox"></td>
+            <td><input type="checkbox" class="food"></td>
+            <td><input type="checkbox" class="drink"></td>
+            <td><input type="checkbox" class="experience"></td>
+            <td><input type="checkbox" class="funny"></td>
         </tr>
     </table>
 
-    <button onclick="alert('Voti inviati!')">Invia Voti</button>
+    <button onclick="submitVotes()">Invia Voti</button>
+
+    <div id="totals">
+        <p>Food: 0 | Drink: 0 | Experience: 0 | Funny: 0</p>
+    </div>
+
+    <script>
+        function submitVotes() {
+            const categories = ['food', 'drink', 'experience', 'funny'];
+            const totals = { food: 0, drink: 0, experience: 0, funny: 0 };
+
+            categories.forEach(cat => {
+                const checkboxes = document.querySelectorAll('input.' + cat);
+                checkboxes.forEach(cb => {
+                    if(cb.checked) totals[cat]++;
+                });
+            });
+
+            document.getElementById('totals').innerHTML = 
+                `<p>Food: ${totals.food} | Drink: ${totals.drink} | Experience: ${totals.experience} | Funny: ${totals.funny}</p>`;
+
+            alert('Voti inviati!');
+        }
+    </script>
 
 </body>
 </html>
