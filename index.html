@@ -5,184 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bacaro Challenge 2025</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #fdf6e3;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background: #d35400;
-            color: white;
-            padding: 20px;
-        }
-        h1 {
-            margin: 0;
-        }
-        table {
-            width: 90%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background: white;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-        th {
-            background: #f39c12;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-        input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-        }
-        button {
-            background: #27ae60;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background: #219150;
-        }
+        body { font-family: Arial, sans-serif; background: #fdf6e3; color: #333; text-align:center; margin:0; padding:0; }
+        header { background:#d35400; color:white; padding:20px; }
+        h1 { margin:0; }
+        ul { list-style:none; padding:0; }
+        li { margin:10px 0; }
+        a { text-decoration:none; color:#27ae60; font-weight:bold; }
+        a:hover { color:#219150; }
+        table { width: 80%; margin: 20px auto; border-collapse: collapse; background:white; }
+        th, td { padding:10px; border:1px solid #ddd; }
+        th { background:#f39c12; color:white; }
+        tr:nth-child(even){ background:#f9f9f9; }
+        input[type="checkbox"] { width:20px; height:20px; }
+        button { background:#27ae60; color:white; padding:10px 15px; border:none; cursor:pointer; margin-top:20px; }
+        button:hover { background:#219150; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Bacaro Challenge - Ferragosto 2025</h1>
-    <p>Ogni famiglia vota il miglior cicchetto nelle quattro categorie: Food, Drink, Experience, Funny</p>
+    <p>Seleziona la tua famiglia e vota le altre 10 nelle quattro categorie</p>
 </header>
 
-<table>
-    <tr>
-        <th>Famiglia</th>
-        <th>Food</th>
-        <th>Drink</th>
-        <th>Experience</th>
-        <th>Funny</th>
-    </tr>
-    <tr>
-        <td>Ventura</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Albertini</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Embrinati</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Scattolon</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Fosca</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Depentori</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Favaro</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Depolo</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Bertoncello</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Conforte</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-    <tr>
-        <td>Moser</td>
-        <td><input type="checkbox" name="Food"></td>
-        <td><input type="checkbox" name="Drink"></td>
-        <td><input type="checkbox" name="Experience"></td>
-        <td><input type="checkbox" name="Funny"></td>
-    </tr>
-</table>
-
-<button onclick="calcolaVoti()">Invia Voti</button>
-
-<script>
-function calcolaVoti() {
-    const categorie = ["Food", "Drink", "Experience", "Funny"];
-    const risultati = {};
-
-    categorie.forEach(cat => risultati[cat] = {});
-
-    const righe = document.querySelectorAll("table tr");
-    righe.forEach((riga, i) => {
-        if(i === 0) return; // salta intestazione
-        const famiglia = riga.cells[0].textContent;
-        categorie.forEach((cat, j) => {
-            const checkbox = riga.cells[j+1].querySelector("input[type='checkbox']");
-            if(checkbox.checked) {
-                if(!risultati[cat][famiglia]) risultati[cat][famiglia] = 0;
-                risultati[cat][famiglia]++;
-            }
-        });
-    });
-
-    let messaggio = "Riepilogo voti:\n\n";
-    categorie.forEach(cat => {
-        messaggio += cat + ":\n";
-        for(const famiglia in risultati[cat]) {
-            messaggio += famiglia + ": " + risultati[cat][famiglia] + "\n";
-        }
-        messaggio += "\n";
-    });
-
-    alert(messaggio);
-}
-</script>
+<h2>Scegli la tua famiglia:</h2>
+<ul>
+    <li><a href="voto.html?famiglia=Ventura">Ventura</a></li>
+    <li><a href="voto.html?famiglia=Albertini">Albertini</a></li>
+    <li><a href="voto.html?famiglia=Embrinati">Embrinati</a></li>
+    <li><a href="voto.html?famiglia=Scattolon">Scattolon</a></li>
+    <li><a href="voto.html?famiglia=Fosca">Fosca</a></li>
+    <li><a href="voto.html?famiglia=Depentori">Depentori</a></li>
+    <li><a href="voto.html?famiglia=Favaro">Favaro</a></li>
+    <li><a href="voto.html?famiglia=Depolo">Depolo</a></li>
+    <li><a href="voto.html?famiglia=Bertoncello">Bertoncello</a></li>
+    <li><a href="voto.html?famiglia=Conforte">Conforte</a></li>
+    <li><a href="voto.html?famiglia=Moser">Moser</a></li>
+</ul>
 
 </body>
 </html>
