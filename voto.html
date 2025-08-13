@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voto Bacaro Challenge</title>
-<style>
-    body { font-family: Arial, sans-serif; background:#fdf6e3; color:#333; text-align:center; margin:0; padding:0; }
-    header { background:#d35400; color:white; padding:20px; }
-    h1 { margin:0; }
-    table { width:80%; margin:20px auto; border-collapse:collapse; background:white; }
-    th, td { padding:10px; border:1px solid #ddd; }
-    th { background:#f39c12; color:white; }
-    tr:nth-child(even){ background:#f9f9f9; }
-    input[type="checkbox"] { width:20px; height:20px; }
-    button { background:#27ae60; color:white; padding:10px 15px; border:none; cursor:pointer; margin-top:20px; }
-    button:hover { background:#219150; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto Ventura - Bacaro Challenge 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf6e3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #d35400;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background: #f39c12;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        input[type="checkbox"] {
+            transform: scale(1.2);
+        }
+        button {
+            background: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #219150;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-<h1 id="header-title">Bacaro Challenge - Ferragosto 2025</h1>
-<p>Vota le altre famiglie nelle quattro categorie: Food, Drink, Experience, Funny</p>
+    <h1>Vota Ventura - Bacaro Challenge 2025</h1>
+    <p>Seleziona la famiglia migliore per ogni categoria: Food, Drink, Experience, Funny</p>
 </header>
 
-<table id="vote-table">
+<table>
     <tr>
         <th>Famiglia</th>
         <th>Food</th>
@@ -32,38 +70,80 @@
         <th>Experience</th>
         <th>Funny</th>
     </tr>
+    <tr>
+        <td>Albertini</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Embrinati</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Scattolon</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Fosca</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Depentori</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Favaro</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Depolo</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Bertoncello</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Conforte</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>Moser</td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+        <td><input type="checkbox"></td>
+    </tr>
 </table>
 
-<button onclick="submitVotes()">Invia Voti</button>
-
-<script>
-// Legge il parametro della famiglia dalla URL
-const urlParams = new URLSearchParams(window.location.search);
-const famigliaCorrente = urlParams.get('famiglia');
-document.getElementById('header-title').innerText = `Bacaro Challenge - Voto per ${famigliaCorrente}`;
-
-// Tutte le famiglie
-const famiglie = ["Ventura","Albertini","Embrinati","Scattolon","Fosca","Depentori","Favaro","Depolo","Bertoncello","Conforte","Moser"];
-
-// Rimuove la famiglia corrente dalla lista
-const altreFamiglie = famiglie.filter(f => f !== famigliaCorrente);
-
-// Genera le righe della tabella
-const table = document.getElementById('vote-table');
-altreFamiglie.forEach(fam => {
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>${fam}</td>
-        <td><input type="checkbox" name="food"></td>
-        <td><input type="checkbox" name="drink"></td>
-        <td><input type="checkbox" name="experience"></td>
-        <td><input type="checkbox" name="funny"></td>`;
-    table.appendChild(row);
-});
-
-function submitVotes() {
-    alert('Voti inviati! (per ora non salvati permanentemente)');
-}
-</script>
+<button onclick="alert('Voti inviati!')">Invia Voti</button>
+<button onclick="window.location.href='index.html'">Torna alla Home</button>
 
 </body>
 </html>
