@@ -1,61 +1,103 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bacaro Challenge 2025 - Costa del Mar</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #fdf6e3; color: #333; text-align:center; margin:0; padding:0; }
-        header { background:#d35400; color:white; padding:20px; }
-        h1 { margin:0; }
-        ul { list-style:none; padding:0; }
-        li { margin:10px 0; }
-        a { text-decoration:none; color:#27ae60; font-weight:bold; }
-        a:hover { color:#219150; }
-        table { width: 80%; margin: 20px auto; border-collapse: collapse; background:white; }
-        th, td { padding:10px; border:1px solid #ddd; }
-        th { background:#f39c12; color:white; }
-        tr:nth-child(even){ background:#f9f9f9; }
-        input[type="checkbox"] { width:20px; height:20px; }
-        button { background:#27ae60; color:white; padding:10px 15px; border:none; cursor:pointer; margin-top:20px; }
-        button:hover { background:#219150; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vota la tua famiglia</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      position: relative;
+      background-image: url('immagini/Costadelmar.jpg'); /* Sostituisci con il tuo file */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    /* Overlay scuro */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .famiglie {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .famiglie a {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+
+    .famiglie a:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .famiglie a {
+        font-size: 1rem;
+        padding: 8px 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <h1>Bacaro Challenge al Costa del Mar - Ferragosto 2025</h1>
-    <p>Seleziona la tua famiglia e vota le altre 10 nelle quattro categorie. Hai un solo voto per categoria</p>
-</header>
-
-<h2>Scegli la tua famiglia:</h2>
-<ul>
-    <li><a href="voto/ventura.html">Ventura</a></li>
-    <li><a href="voto/albertini.html">Albertini</a></li>
-    <li><a href="voto/embrinati.html">Embrinati</a></li>
-    <li><a href="voto/scattolon.html">Scattolon</a></li>
-    <li><a href="voto/fosca.html">Fosca</a></li>
-    <li><a href="voto/depentori.html">Depentori</a></li>
-    <li><a href="voto/favaro.html">Favaro</a></li>
-    <li><a href="voto/depolo.html">Depolo</a></li>
-    <li><a href="voto/bertoncello.html">Bertoncello</a></li>
-    <li><a href="voto/conforte.html">Conforte</a></li>
-    <li><a href="voto/moser.html">Moser</a></li>
-</ul>
-
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Scegli la tua famiglia</h1>
+      <div class="famiglie">
+        <a href="voto/ventura.html">Ventura</a>
+        <a href="voto/albertini.html">Albertini</a>
+        <a href="voto/embrinati.html">Embrinati</a>
+        <a href="voto/scattolon.html">Scattolon</a>
+        <a href="voto/fosca.html">Fosca</a>
+        <a href="voto/depentori.html">Depentori</a>
+        <a href="voto/favaro.html">Favaro</a>
+        <a href="voto/depolo.html">Depolo</a>
+        <a href="voto/bertoncello.html">Bertoncello</a>
+        <a href="voto/conforte.html">Conforte</a>
+        <a href="voto/moser.html">Moser</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-
-<style>
-  body {
-    background-image: url('Costadelmar.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
-
-
-
-
-
