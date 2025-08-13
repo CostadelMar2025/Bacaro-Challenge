@@ -1,128 +1,143 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Bacaro Challenge 2025</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f4e3;
-        color: #333;
-        text-align: center;
-        padding: 20px;
-    }
-    h1 {
-        color: #b23a48;
-    }
-    table {
-        margin: 20px auto;
-        border-collapse: collapse;
-        width: 90%;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-    }
-    th {
-        background-color: #ffcb77;
-        color: #333;
-    }
-    input[type="number"] {
-        width: 60px;
-        padding: 4px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    button {
-        background-color: #b23a48;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        margin-top: 15px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    button:hover {
-        background-color: #922d3a;
-    }
-    .result {
-        margin-top: 20px;
-        font-size: 18px;
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 6px;
-        display: inline-block;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacaro Challenge 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf6e3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #d35400;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #f39c12;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        input {
+            width: 50px;
+            text-align: center;
+        }
+        button {
+            background: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #219150;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bacaro Challenge 🍷</h1>
-    <p>Inserisci i punteggi per ogni famiglia nelle tre categorie e scopri i vincitori!</p>
 
-    <table id="scoreTable">
-        <thead>
-            <tr>
-                <th>Famiglia</th>
-                <th>Bere</th>
-                <th>Mangiare</th>
-                <th>Esperienza</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Puoi modificare i nomi qui -->
-            <tr>
-                <td>Famiglia 1</td>
-                <td><input type="number" min="0" max="10"></td>
-                <td><input type="number" min="0" max="10"></td>
-                <td><input type="number" min="0" max="10"></td>
-            </tr>
-            <tr>
-                <td>Famiglia 2</td>
-                <td><input type="number" min="0" max="10"></td>
-                <td><input type="number" min="0" max="10"></td>
-                <td><input type="number" min="0" max="10"></td>
-            </tr>
-            <!-- Aggiungi altre famiglie fino a 11 -->
-        </tbody>
+    <header>
+        <h1>Bacaro Challenge - Ferragosto 2025</h1>
+        <p>Vota il miglior cicchetto nelle tre categorie: Bere, Mangiare, Esperienza</p>
+    </header>
+
+    <table>
+        <tr>
+            <th>Famiglia</th>
+            <th>Bere</th>
+            <th>Mangiare</th>
+            <th>Esperienza</th>
+        </tr>
+        <tr>
+            <td>Famiglia 1</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 2</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 3</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 4</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 5</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 6</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 7</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 8</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 9</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 10</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
+        <tr>
+            <td>Famiglia 11</td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+            <td><input type="number" min="0" max="10"></td>
+        </tr>
     </table>
 
-    <button onclick="calculateWinners()">Calcola Vincitori</button>
+    <button onclick="alert('Voti inviati!')">Invia Voti</button>
 
-    <div id="results" class="result"></div>
-
-<script>
-function calculateWinners() {
-    let table = document.getElementById("scoreTable").tBodies[0].rows;
-    let bereScores = [], mangiareScores = [], esperienzaScores = [], totalScores = [];
-
-    for (let i = 0; i < table.length; i++) {
-        let name = table[i].cells[0].innerText;
-        let bere = parseFloat(table[i].cells[1].children[0].value) || 0;
-        let mangiare = parseFloat(table[i].cells[2].children[0].value) || 0;
-        let esperienza = parseFloat(table[i].cells[3].children[0].value) || 0;
-        bereScores.push({name, score: bere});
-        mangiareScores.push({name, score: mangiare});
-        esperienzaScores.push({name, score: esperienza});
-        totalScores.push({name, score: bere + mangiare + esperienza});
-    }
-
-    bereScores.sort((a,b) => b.score - a.score);
-    mangiareScores.sort((a,b) => b.score - a.score);
-    esperienzaScores.sort((a,b) => b.score - a.score);
-    totalScores.sort((a,b) => b.score - a.score);
-
-    document.getElementById("results").innerHTML =
-        `<strong>Vincitore Bere:</strong> ${bereScores[0].name} (${bereScores[0].score} punti)<br>
-         <strong>Vincitore Mangiare:</strong> ${mangiareScores[0].name} (${mangiareScores[0].score} punti)<br>
-         <strong>Vincitore Esperienza:</strong> ${esperienzaScores[0].name} (${esperienzaScores[0].score} punti)<br>
-         <hr>
-         🏆 <strong>Vincitore Assoluto:</strong> ${totalScores[0].name} (${totalScores[0].score} punti)`;
-}
-</script>
 </body>
 </html>
